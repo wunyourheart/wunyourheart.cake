@@ -130,7 +130,36 @@
       color: #777;
       margin-top: 6px;
       line-height: 1.6;
+      
     }
+    /* 口味尺寸卡片統一樣式 */
+.info-group {
+  margin-bottom: 18px;
+}
+
+.info-group-title {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.info-box {
+  border-radius: 16px;
+  padding: 12px 14px;
+  border: 1px solid rgba(0,0,0,0.06);
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.info-note {
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #888;
+}
 /* 浮動底部社群列（桌機正常、手機吸底） */
 .footer-bar {
   text-align: center;
@@ -303,25 +332,55 @@
     </div>
   </div>
 
-  <!-- 分頁 2：口味尺寸 -->
-  <div class="content">
-    <h2>蛋糕體口味（擇一）</h2>
-    原味香草｜伯爵紅茶｜巧克力
+ <!-- 分頁 2：口味尺寸 -->
+<div class="content">
 
-    <h2>內餡口味（擇二）</h2>
-    當季水果｜鐵觀音卡士達｜伯爵卡士達｜香草卡士達｜巧克力慕斯｜自製布丁｜自製芋泥
+  <h2>🍰 口味與尺寸說明</h2>
 
-    <h2>尺寸與人數</h2>
-    4 吋：約 2–4 人份<br>
-    6 吋：約 5–8 人份<br>
-    8 吋：約 12–15 人份<br>
-    6+4 吋雙層：約 10–16 人份
-
-    <h2>包裝配件</h2>
-    4–6 吋：標配 5 人份餐盤＋蠟燭<br>
-    8 吋：標配 10 人份餐盤＋蠟燭<br>
-    加購餐盤：一份五入 $40
+  <!-- 蛋糕體口味 -->
+  <div class="info-group">
+    <div class="info-group-title">▸ 蛋糕體口味（擇一）</div>
+    <div class="info-box">
+      原味香草｜伯爵紅茶｜巧克力
+    </div>
   </div>
+
+  <!-- 內餡口味 -->
+  <div class="info-group">
+    <div class="info-group-title">▸ 內餡口味（擇二）</div>
+    <div class="info-box">
+      當季水果｜鐵觀音卡士達｜伯爵卡士達｜香草卡士達｜巧克力慕斯｜自製布丁｜自製芋泥
+
+      <div class="info-note">
+        若有過敏體質、不能食用或需避開的食材，<br>
+        請務必於下單前主動告知，<br>
+        我們將特別留意製作細節，確保安全無虞。
+      </div>
+    </div>
+  </div>
+
+  <!-- 尺寸與人數 -->
+  <div class="info-group">
+    <div class="info-group-title">▸ 尺寸與人數</div>
+    <div class="info-box">
+      4 吋：約 2–4 人份<br>
+      6 吋：約 5–8 人份<br>
+      8 吋：約 12–15 人份<br>
+      6+4 吋雙層：約 10–16 人份
+    </div>
+  </div>
+
+  <!-- 包裝配件 -->
+  <div class="info-group">
+    <div class="info-group-title">▸ 包裝配件</div>
+    <div class="info-box">
+      4–6 吋：標配 5 人份餐盤＋蠟燭<br>
+      8 吋：標配 10 人份餐盤＋蠟燭<br>
+      加購餐盤：一份五入 $40
+    </div>
+  </div>
+
+</div>
 
   <!-- 分頁 3：取貨付款 -->
   <div class="content">
