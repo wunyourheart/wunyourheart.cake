@@ -4,6 +4,60 @@
   <meta charset="UTF-8">
   <title>WUNYOURHEART｜蛋糕訂購須知</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      /* 價目表樣式 */
+    .price-list {
+      margin-top: 8px;
+      padding-top: 4px;
+      border-top: 1px solid rgba(0,0,0,0.08);
+      font-size: 13px;
+    }
+
+    .price-group {
+      margin-bottom: 16px;
+    }
+
+    .price-group-title {
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .price-rows {
+      border-radius: 12px;
+      padding: 6px 10px;
+      border: 1px solid rgba(0,0,0,0.06);
+      background: rgba(255,255,255,0.9);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+    }
+
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 3px 0;
+      border-bottom: 1px dashed rgba(0,0,0,0.08);
+    }
+
+    .price-row:last-child {
+      border-bottom: none;
+    }
+
+    .price-size {
+      color: #333;
+    }
+
+    .price-value {
+      font-weight: 600;
+    }
+
+    .price-note {
+      font-size: 12px;
+      color: var(--text-sub);
+      margin-top: 6px;
+      line-height: 1.6;
+    }
+
   <style>
     body {
       margin: 0;
@@ -108,41 +162,105 @@
   </div>
 
   <div class="tabs">
-    <div class="tab active" onclick="switchTab(0)">價格</div>
+    <div class="tab active" onclick="switchTab(0)">價目表</div>
     <div class="tab" onclick="switchTab(1)">口味尺寸</div>
     <div class="tab" onclick="switchTab(2)">取貨付款</div>
   </div>
 
   <!-- 分頁 1：價格 -->
-  <div class="content active">
-    <h2>鮮奶油蛋糕｜參考價格</h2>
-    <div class="price-grid">
-      <div class="box">
-        韓式簡約<br>
-        4吋 $800｜6吋 $1250｜8吋 $1850
-      </div>
-      <div class="box">
-        繪圖・鮮花・翻糖・公仔<br>
-        4吋 $980｜6吋 $1650｜8吋 $2250
-      </div>
-      <div class="box">
-        韓式豆沙裱花<br>
-        4吋 $1350｜6吋 $1850｜8吋 $2650
+<!-- 分頁 1：價格 -->
+<div class="content active">
+  <h2>🍰 蛋糕價目表</h2>
+
+  <div class="price-list">
+
+    <!-- 韓式簡約蛋糕 -->
+    <div class="price-group">
+      <div class="price-group-title">▸ 韓式簡約蛋糕</div>
+      <div class="price-rows">
+        <div class="price-row">
+          <span class="price-size">4 吋</span>
+          <span class="price-value">$900 起</span>
+        </div>
+        <div class="price-row">
+          <span class="price-size">6 吋</span>
+          <span class="price-value">$1,600 起</span>
+        </div>
+        <div class="price-row">
+          <span class="price-size">8 吋</span>
+          <span class="price-value">$2,600 起</span>
+        </div>
       </div>
     </div>
-    <p>＊以上皆為起價，最終價格依設計與夾餡複雜度報價。</p>
+
+    <!-- 燃燒蛋糕 -->
+    <div class="price-group">
+      <div class="price-group-title">▸ 燃燒蛋糕</div>
+      <div class="price-rows">
+        <div class="price-row">
+          <span class="price-size">4 吋</span>
+          <span class="price-value">$1,600 起</span>
+        </div>
+        <div class="price-row">
+          <span class="price-size">6 吋</span>
+          <span class="price-value">$2,680 起</span>
+        </div>
+        <div class="price-row">
+          <span class="price-size">8 吋</span>
+          <span class="price-value">$3,680 起</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 繪圖・鮮花・公仔・翻糖蛋糕 -->
+    <div class="price-group">
+      <div class="price-group-title">▸ 繪圖 · 鮮花 · 公仔 · 翻糖蛋糕</div>
+      <div class="price-rows">
+        <div class="price-row">
+          <span class="price-size">4 吋</span>
+          <span class="price-value">$1,500 起</span>
+        </div>
+        <div class="price-row">
+          <span class="price-size">6 吋</span>
+          <span class="price-value">$2,100 起</span>
+        </div>
+        <div class="price-row">
+          <span class="price-size">8 吋</span>
+          <span class="price-value">$3,000 起</span>
+        <!-- 迷你蛋糕 -->
+    <div class="price-group">
+      <div class="price-group-title">▸ 迷你蛋糕</div>
+      <div class="price-rows">
+        <div class="price-row">
+          <span class="price-size">2.5 吋</span>
+          <span class="price-value">單顆 $550 起</span>
+      </div>
+    </div>
+
+    <p class="price-note">
+      ✦ 以上價格皆為「圓形蛋糕」基本起跳價，愛心、方形及其他立體造型皆可另外詢問。<br>
+      ✦ 蛋糕實際價格會依照口味、外觀設計、特殊種類及手工難易度個別報價。<br>
+      我們會在細節完整確認後提供最終報價，確認沒問題再進行下單。<br>
+      若有預算考量或細節想調整，也都歡迎一起討論，確認 OK 再下單即可 🤍
+    </p>
+
   </div>
+</div>
+   
 
   <!-- 分頁 2：口味尺寸 -->
   <div class="content">
     <h2>蛋糕體口味（擇一）</h2>
     原味香草｜伯爵紅茶｜巧克力
 
-    <h2>夾心口味（擇二）</h2>
+    <h2>內餡口味（擇二）</h2>
     當季水果｜鐵觀音卡士達｜伯爵卡士達｜香草卡士達｜巧克力慕斯｜自製布丁｜自製芋泥
 
     <h2>尺寸與人數</h2>
-    4吋：2–4人｜6吋：5–8人｜8吋：12–15人｜6+4雙層：10–16人
+    4吋：2–4人
+    6吋：5–8人
+    8吋：12–15人
+    6+4雙層：10–16人
 
     <h2>包裝配件</h2>
     4–6吋：標配 5人份餐盤＋蠟燭  
@@ -157,7 +275,9 @@
     取貨時間：11:00–19:00（可彈性調整）
 
     <h2>外送服務</h2>
-    埔里市區 $120 起｜魚池鄉 $300 起｜日月潭碼頭 $350 起｜伊達邵 $450 起
+    埔里市區 $200 起
+    魚池鄉  $400 起
+    伊達邵  $500 起
 
     <h2>付款方式</h2>
     匯款或 Line Pay，全額付款  
