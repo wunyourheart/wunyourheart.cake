@@ -1,412 +1,185 @@
-<!DOCTYPE html>\
-<html lang="zh-Hant">\
-<head>\
-    <meta charset="UTF-8">\
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
-    <title>\uc0\u55356 \u57200  \u34507 \u31957 \u35330 \u36092 \u38920 \u30693  | WunYourHeart</title>\
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">\
-    <style>\
-        /* ------------------------------------ */\
-        /* 2. \uc0\u35222 \u35258 \u39080 \u26684 \u65306 \u40657 \u30333 \u28784  + \u31777 \u32004 \u32011 \u29702  */\
-        /* ------------------------------------ */\
-        :root \{\
-            --primary-color: #333333; /* \uc0\u20027 \u35201 \u25991 \u23383 /\u32218 \u26781  */\
-            --secondary-color: #555555; /* \uc0\u27425 \u35201 \u25991 \u23383  */\
-            --background-color: #FFFFFF; /* \uc0\u32972 \u26223 \u30333 \u33394  */\
-            --accent-color: #F0F0F0; /* \uc0\u20998 \u38913 /\u32218 \u26781 \u28784 \u33394  */\
-            --font-main: 'Noto Sans TC', sans-serif;\
-            --font-serif: 'Playfair Display', serif;\
-        \}\
-\
-        body \{\
-            font-family: var(--font-main);\
-            color: var(--primary-color);\
-            line-height: 1.6;\
-            margin: 0;\
-            padding: 20px;\
-            background-color: var(--background-color);\
-            /* \uc0\u36074 \u24863 \u31777 \u32004 \u32011 \u36335 \u25554 \u30059 \u39080 \u26684 \u65306 \u32048 \u24494 \u30340 \u38620 \u35338 \u32011 \u29702  */\
-            background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f7f7f7' fill-opacity='0.5' fill-rule='evenodd'%3E%3Cpath d='M3 0h3v3H3V0zm0 3h3v3H3V3z'/%3E%3C/g%3E%3C/svg%3E");\
-            min-height: 100vh;\
-            display: flex;\
-            justify-content: center;\
-            align-items: flex-start;\
-        \}\
-\
-        .card-container \{\
-            width: 100%;\
-            max-width: 480px; /* \uc0\u27169 \u25836 \u25163 \u27231 \u25110 \u23567 \u21345 \u29255 \u23532 \u24230  */\
-            background: var(--background-color);\
-            border: 1px solid var(--accent-color);\
-            border-radius: 12px;\
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);\
-            overflow: hidden;\
-        \}\
-\
-        /* \uc0\u27161 \u38988 \u33287 Logo */\
-        .header \{\
-            padding: 30px 25px 20px;\
-            text-align: center;\
-            border-bottom: 1px solid var(--accent-color);\
-        \}\
-\
-        .header h1 \{\
-            font-family: var(--font-serif);\
-            font-weight: 700;\
-            font-size: 1.8em;\
-            margin: 5px 0 0;\
-            letter-spacing: 2px;\
-        \}\
-        .header p \{\
-            font-size: 0.9em;\
-            color: var(--secondary-color);\
-            margin: 0;\
-        \}\
-\
-        /* 3. \uc0\u20998 \u38913 \u35373 \u35336  */\
-        .tabs \{\
-            display: flex;\
-            border-bottom: 1px solid var(--accent-color);\
-        \}\
-\
-        .tab-button \{\
-            flex-grow: 1;\
-            padding: 15px 10px;\
-            text-align: center;\
-            cursor: pointer;\
-            background-color: var(--background-color);\
-            border: none;\
-            border-bottom: 3px solid transparent;\
-            font-weight: 400;\
-            transition: all 0.3s ease;\
-            font-size: 1em;\
-            color: var(--secondary-color);\
-        \}\
-\
-        .tab-button:hover \{\
-            background-color: var(--accent-color);\
-        \}\
-\
-        .tab-button.active \{\
-            color: var(--primary-color);\
-            font-weight: 700;\
-            border-bottom: 3px solid var(--primary-color);\
-            background-color: var(--accent-color);\
-        \}\
-\
-        .tab-content \{\
-            padding: 25px;\
-        \}\
-\
-        .content-section \{\
-            display: none;\
-        \}\
-\
-        .content-section.active \{\
-            display: block;\
-        \}\
-\
-        /* \uc0\u20839 \u23481 \u27171 \u24335  */\
-        h3 \{\
-            font-family: var(--font-serif);\
-            font-size: 1.3em;\
-            margin-top: 0;\
-            margin-bottom: 15px;\
-            color: var(--primary-color);\
-            border-left: 3px solid var(--primary-color);\
-            padding-left: 10px;\
-        \}\
-        \
-        h4 \{\
-            font-family: var(--font-serif);\
-            font-size: 1.1em;\
-            margin-top: 20px;\
-            margin-bottom: 10px;\
-            color: var(--primary-color);\
-        \}\
-\
-        ul \{\
-            list-style: none;\
-            padding-left: 0;\
-        \}\
-\
-        li \{\
-            margin-bottom: 12px;\
-            padding-left: 1.5em;\
-            position: relative;\
-        \}\
-        \
-        li:before \{\
-            content: "\'95";\
-            position: absolute;\
-            left: 0;\
-            color: var(--primary-color);\
-            font-weight: bold;\
-        \}\
-\
-        strong \{\
-            font-weight: 700;\
-            color: var(--primary-color);\
-        \}\
-        \
-        em \{\
-            font-style: normal;\
-            font-weight: 700;\
-            color: #d84315; /* \uc0\u24375 \u35519 \u33394  */\
-        \}\
-\
-        /* \uc0\u20729 \u30446 \u34920 \u29305 \u21270  */\
-        .price-table \{\
-            width: 100%;\
-            margin-bottom: 20px;\
-        \}\
-        .price-category \{\
-            font-weight: 700;\
-            color: var(--primary-color);\
-            text-align: center;\
-            padding-top: 10px;\
-            border-bottom: 1px solid var(--accent-color);\
-            margin-top: 15px;\
-        \}\
-        .price-row \{\
-            display: grid;\
-            grid-template-columns: 1fr 1fr 1fr 1fr; /* 1\uc0\u20491 \u23610 \u23544  + 3\u20491 \u20729 \u26684 \u27396 \u20301  */\
-            text-align: center;\
-            padding: 8px 0;\
-            border-bottom: 1px dashed var(--accent-color);\
-            font-size: 0.9em;\
-        \}\
-        .price-row div:first-child \{\
-            font-weight: 700;\
-        \}\
-        .price-note \{\
-            font-size: 0.9em;\
-            color: var(--secondary-color);\
-            margin-top: 15px;\
-            line-height: 1.4;\
-            border-top: 1px solid var(--accent-color);\
-            padding-top: 10px;\
-        \}\
-        .info-box \{\
-             background-color: var(--accent-color);\
-             padding: 15px;\
-             border-radius: 8px;\
-             margin-top: 15px;\
-             font-size: 0.95em;\
-             line-height: 1.5;\
-        \}\
-        .delivery-table \{\
-            width: 100%;\
-            border-collapse: collapse;\
-            margin-top: 10px;\
-        \}\
-        .delivery-table th, .delivery-table td \{\
-            padding: 8px;\
-            border-bottom: 1px dashed var(--accent-color);\
-            text-align: left;\
-            font-size: 0.95em;\
-        \}\
-        .delivery-table th \{\
-            font-weight: 700;\
-            width: 30%;\
-        \}\
-        .delivery-table td \{\
-            font-weight: 400;\
-            color: var(--secondary-color);\
-        \}\
-    </style>\
-</head>\
-<body>\
-\
-<div class="card-container">\
-    \
-    <div class="header">\
-        <p>CAKE ORDER NOTICE</p>\
-        <h1>WUNYOURHEART</h1>\
-        <p>\uc0\u55356 \u57200  \u25163 \u20316 \u29980 \u40670 \u24037 \u20316 \u23460 </p>\
-    </div>\
-\
-    <div class="tabs">\
-        <button class="tab-button active" data-tab="menu">\uc0\u55356 \u57218  \u33756 \u21934 &\u23610 \u23544 </button>\
-        <button class="tab-button" data-tab="price">\uc0\u55356 \u57335 \u65039  \u21443 \u32771 \u20729 \u26684 </button>\
-        <button class="tab-button" data-tab="booking">\uc0\u55357 \u56541  \u35330 \u36092 \u38920 \u30693 </button>\
-        <button class="tab-button" data-tab="pickup">\uc0\u55357 \u57077  \u21462 \u36008 \u26041 \u24335 </button>\
-    </div>\
-\
-    <div class="tab-content">\
-        \
-        <div id="menu" class="content-section active">\
-            <h3>\uc0\u34507 \u31957 \u21475 \u21619 \u33287 \u22846 \u24515 </h3>\
-            <h4>\uc0\u34507 \u31957 \u39636 \u21475 \u21619  (\u25799 \u19968 )</h4>\
-            <ul>\
-                <li>\uc0\u21407 \u21619 \u39321 \u33609 </li>\
-                <li>\uc0\u20271 \u29237 \u32005 \u33590 </li>\
-                <li>\uc0\u24039 \u20811 \u21147 </li>\
-            </ul>\
-            \
-            <h4>\uc0\u22846 \u24515 \u21475 \u21619  (\u25799 \u20108 )</h4>\
-            <ul>\
-                <li>\uc0\u30070 \u23395 \u27700 \u26524  (\u33509 \u26377 \u19981 \u21507 \u30340 \u27700 \u26524 \u35531 \u21578 \u30693 )</li>\
-                <li>\uc0\u37941 \u35264 \u38899 \u21345 \u22763 \u36948  / \u20271 \u29237 \u21345 \u22763 \u36948  / \u39321 \u33609 \u21345 \u22763 \u36948 </li>\
-                <li>\uc0\u24039 \u20811 \u21147 \u24917 \u26031  / \u33258 \u35069 \u24067 \u19969  / \u33258 \u35069 \u33419 \u27877 </li>\
-            </ul>\
-            \
-            <h3 style="margin-top: 30px;">\uc0\u34507 \u31957 \u23610 \u23544 \u33287 \u37197 \u20214 </h3>\
-            \
-            <table class="delivery-table">\
-                <thead>\
-                    <tr>\
-                        <th>\uc0\u23610 \u23544  (\u24179 \u38754 \u30452 \u24465 )</th>\
-                        <th>\uc0\u36969 \u21512 \u20154 \u25976 </th>\
-                    </tr>\
-                </thead>\
-                <tbody>\
-                    <tr>\
-                        <td>4 \uc0\u21515  (\u32004  10cm)</td>\
-                        <td>\uc0\u32004  2-4 \u20154 \u20221 </td>\
-                    </tr>\
-                    <tr>\
-                        <td>6 \uc0\u21515  (\u32004  15cm)</td>\
-                        <td>\uc0\u32004  5-8 \u20154 \u20221 </td>\
-                    </tr>\
-                    <tr>\
-                        <td>8 \uc0\u21515  (\u32004  20cm)</td>\
-                        <td>\uc0\u32004  12-15 \u20154 \u20221 </td>\
-                    </tr>\
-                    <tr>\
-                        <td>6+4 \uc0\u21515  \u38617 \u23652 </td>\
-                        <td>\uc0\u32004  10-16 \u20154 \u20221 </td>\
-                    </tr>\
-                </tbody>\
-            </table>\
-            \
-            <h4>\uc0\u21253 \u35037 \u37197 \u20214 </h4>\
-            <ul>\
-                <li><strong>4-6 \uc0\u21515 \u65306 </strong>\u27161 \u37197  5 \u20154 \u20221 \u39184 \u30436  / \u21934 \u26681 \u34847 \u29165 </li>\
-                <li><strong>8 \uc0\u21515 \u65306 </strong>\u27161 \u37197  10 \u20154 \u20221 \u39184 \u30436  / \u21934 \u26681 \u34847 \u29165 </li>\
-                <li>\uc0\u39184 \u30436 \u21152 \u36092 \u65306 \u19968 \u20221  **5 \u20837  $40 \u20803 **</li>\
-            </ul>\
-        </div>\
-        \
-        <div id="price" class="content-section">\
-            <h3>\uc0\u39854 \u22902 \u27833 \u34507 \u31957 \u21443 \u32771 \u20729 \u26684 </h3>\
-            \
-            <div class="price-table">\
-                <div class="price-category">\uc0\u38867 \u24335 \u31777 \u32004  | \u32362 \u22294 .\u39854 \u33457 .\u32763 \u31958 .\u20844 \u20180  | \u38867 \u24335 \u35910 \u27801 \u35057 \u33457 </div>\
-                <div class="price-row">\
-                    <div>4 \uc0\u21515 </div>\
-                    <div>$800 \uc0\u36215 </div>\
-                    <div>$980 \uc0\u36215 </div>\
-                    <div>$1350 \uc0\u36215 </div>\
-                </div>\
-                <div class="price-row">\
-                    <div>6 \uc0\u21515 </div>\
-                    <div>$1250 \uc0\u36215 </div>\
-                    <div>$1650 \uc0\u36215 </div>\
-                    <div>$1850 \uc0\u36215 </div>\
-                </div>\
-                <div class="price-row">\
-                    <div>8 \uc0\u21515 </div>\
-                    <div>$1850 \uc0\u36215 </div>\
-                    <div>$2250 \uc0\u36215 </div>\
-                    <div>$2650 \uc0\u36215 </div>\
-                </div>\
-            </div>\
-            \
-            <p class="price-note">\
-                * \uc0\u20854 \u20182 \u23610 \u23544 \u12289 \u38617 \u23652 \u21450 \u31435 \u39636 \u36896 \u22411 \u21487 \u20358 \u22294 \u35342 \u35542 \u12290 <br>\
-                * \uc0\u34507 \u31957 \u32317 \u20729 \u26371 \u20381 \u25152 \u36984 \u21475 \u21619 \u12289 \u20839 \u39201 \u12289 \u27171 \u24335 \u35079 \u38620 \u31243 \u24230 \u31561 \u36914 \u34892 \u20272 \u20729 \u65292 \u35342 \u35542 \u23436 \u25104 \u24460 \u26371 \u36914 \u34892 \u23436 \u25972 \u22577 \u20729 \u12290 \
-            </p>\
-        </div>\
-\
-        <div id="booking" class="content-section">\
-            <h3>Hey\uc0\u65281 \u22823 \u23478 \u22909 \u25105 \u26159  WUN \u28331 </h3>\
-            <div class="info-box">\
-                <p>\uc0\u28858 \u19968 \u20154 \u24037 \u20316 \u23460 \u65292 \u22238 \u35206 \u35338 \u24687 \u22806 \u36865 \u30342 \u28858 \u35242 \u33258 \u34389 \u29702 \u65292 \u35531 \u22823 \u23478 \u21209 \u24517 \u38321 \u35712 \u22909 \u35330 \u36092 \u20839 \u23481 \u65292 \u25165 \u33021 \u21152 \u24555 \u35330 \u36092 \u27969 \u31243 \u21908 \u65281 </p>\
-            </div>\
-            \
-            <h4>\uc0\u35330 \u36092 \u33287 \u20184 \u27454 </h4>\
-            <ul>\
-                <li><strong>\uc0\u35330 \u36092 \u26376 \u20221 \u65306 </strong> \u27599 \u26376  **1 \u26085 ** \u38283 \u25918 \u35330 \u36092  **\u19979 \u20491 \u26376 ** \u20221  (\u20363 \u22914 \u65306 7/1 \u38283 \u25918 \u35330 \u36092  8 \u26376 \u20221 )\u12290 </li>\
-                <li><strong>\uc0\u23458 \u35069 \u21270 \u34507 \u31957 \u65306 </strong> \u38656 \u20107 \u20808 \u28310 \u20633 \u32321 \u29795 \u65292 \u35330 \u35069 \u35531 \u33267 \u23569 \u25552 \u26089  **\u19968 \u36913 ** \u35426 \u21839 \u12290 </li>\
-                <li><strong>\uc0\u24613 \u21934 \u21152 \u25910 \u36027 \u29992 \u65306 </strong> **\u19977 \u26085 \u20839 \u24613 \u21934 ** \u21152 \u25910 \u36027 \u29992  **$300**\u12290 </li>\
-                <li><strong>\uc0\u20184 \u27454 \u26041 \u24335 \u65306 </strong> \u20197  \u21295 \u27454  \u25110  Line pay\u20491 \u20154 \u36681 \u24115  **\u20840 \u38989 \u25903 \u20184 **\u12290 </li>\
-                <li><strong>\uc0\u21295 \u27454 \u26399 \u38480 \u65306 </strong> \u35531 \u26044  **3 \u26085 \u20839 ** \u23436 \u25104 \u21295 \u27454 \u65292 \u20006 \u25552 \u20379 \u24115 \u34399 \u26411 \u20116 \u30908 \u65292 \u21295 \u27454 \u23436 \u25104 \u25165 \u31639 \u25104 \u21151 \u35330 \u36092 \u65281 </li>\
-            </ul>\
-\
-            <h4>\uc0\u20854 \u20182 \u38920 \u30693 </h4>\
-            <ul>\
-                <li>\uc0\u27599 \u26376 \u26377 \u19981 \u22266 \u23450 \u20844 \u20241 \u65292 \u24037 \u20316 \u23460 \u29694 \u22580  **\u28961 \u29694 \u36008 ** \u25505 \u38928 \u32004 \u21046 \u12290 </li>\
-                <li>**\uc0\u21475 \u38957 \u32004 \u23450 ** \u19981 \u31639 \u23436 \u25104 \u35330 \u36092 \u65281 </li>\
-            </ul>\
-        </div>\
-\
-        <div id="pickup" class="content-section">\
-            <h3>\uc0\u38754 \u20132 \u33258 \u21462 \u36039 \u35338 </h3>\
-            <ul>\
-                <li><strong>\uc0\u33258 \u21462 \u20301 \u32622 \u65306 </strong> \u23566 \u33322 \u22484 \u37324 \u37806 \u27700 \u38957 \u36335  68 \u34399  (\u22484 \u37324 \u30435 \u29702 \u20998 \u31449 -\u26012 \u23565 \u38754 \u23567 \u26408 \u23627 )</li>\
-                <li><strong>\uc0\u21462 \u36008 \u26178 \u38291 \u65306 </strong> 11:00 ~ 19:00 (\u26371 \u21644 \u24744 \u30906 \u35469 \u26178 \u38291 \u65292 \u21487 \u20381 \u29031 \u24744 \u26041 \u20415 \u30340 \u26178 \u38291 )</li>\
-            </ul>\
-            \
-            <h3 style="margin-top: 30px;">\uc0\u22806 \u36865 \u26381 \u21209  (\u30342 \u28858 \u38342 \u23064 \u35242 \u33258 \u22806 \u36865 )</h3>\
-            <table class="delivery-table">\
-                <tbody>\
-                    <tr><th>\uc0\u22484 \u37324 \u37806 \u24066 \u21312 </th><td>$120 \u36215 </td></tr>\
-                    <tr><th>\uc0\u39770 \u27744 \u37129 \u24066 \u21312 </th><td>$300 \u36215 </td></tr>\
-                    <tr><th>\uc0\u26085 \u26376 \u28525 \u27700 \u31038 \u30908 \u38957 \u38468 \u36817 </th><td>$350 \u36215 </td></tr>\
-                    <tr><th>\uc0\u26085 \u26376 \u28525 \u20234 \u36948 \u37045 \u30908 \u38957 \u38468 \u36817 </th><td>$450 \u36215 </td></tr>\
-                </tbody>\
-            </table>\
-            <p class="price-note">* \uc0\u20381 \u29031 \u23526 \u38555 \u36317 \u38626 \u37196 \u25910 \u22806 \u36865 \u36027 \u12290 </p>\
-        </div>\
-\
-    </div>\
-    \
-</div>\
-\
-<script>\
-    // ------------------------------------\
-    // JavaScript\uc0\u65306 \u25511 \u21046 \u20998 \u38913 \u20999 \u25563 \u21151 \u33021 \
-    // ------------------------------------\
-    document.addEventListener('DOMContentLoaded', function() \{\
-        const tabButtons = document.querySelectorAll('.tab-button');\
-        const contentSections = document.querySelectorAll('.content-section');\
-\
-        function switchTab(tabId) \{\
-            // \uc0\u38577 \u34255 \u25152 \u26377 \u20839 \u23481 \u21312 \u22602 \
-            contentSections.forEach(section => \{\
-                section.classList.remove('active');\
-            \});\
-            // \uc0\u31227 \u38500 \u25152 \u26377 \u25353 \u37397 \u30340  active \u29376 \u24907 \
-            tabButtons.forEach(button => \{\
-                button.classList.remove('active');\
-            \});\
-\
-            // \uc0\u39023 \u31034 \u30446 \u27161 \u20839 \u23481 \u21312 \u22602 \
-            document.getElementById(tabId).classList.add('active');\
-            // \uc0\u35373 \u32622 \u40670 \u25802 \u25353 \u37397 \u30340  active \u29376 \u24907 \
-            document.querySelector(`.tab-button[data-tab="$\{tabId\}"]`).classList.add('active');\
-        \}\
-\
-        tabButtons.forEach(button => \{\
-            button.addEventListener('click', function() \{\
-                const tabId = this.dataset.tab;\
-                // \uc0\u20351 \u29992  localStorage \u35352 \u20303 \u26368 \u24460 \u36984 \u25799 \u30340 \u20998 \u38913  (\u36984 \u29992 \u21151 \u33021 )\
-                localStorage.setItem('lastActiveTab', tabId); \
-                switchTab(tabId);\
-            \});\
-        \});\
-\
-        // \uc0\u27298 \u26597 \u26159 \u21542 \u26377 \u20786 \u23384 \u30340 \u27963 \u21205 \u20998 \u38913 \u65292 \u21542 \u21063 \u38928 \u35373 \u38283 \u21855 \u31532 \u19968 \u20491 \
-        const lastActiveTab = localStorage.getItem('lastActiveTab');\
-        if (lastActiveTab && document.getElementById(lastActiveTab)) \{\
-            switchTab(lastActiveTab);\
-        \} else if (tabButtons.length > 0) \{\
-            switchTab(tabButtons[0].dataset.tab);\
-        \}\
-    \});\
-</script>\
-\
-</body>\
-</html>\
-}
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>WUNYOURHEART｜蛋糕訂購須知</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", sans-serif;
+      background: #f2f2f2 url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+      color: #222;
+    }
+
+    .card {
+      max-width: 420px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      overflow: hidden;
+    }
+
+    .header {
+      padding: 32px 24px 16px;
+      text-align: center;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 26px;
+      letter-spacing: 0.2em;
+    }
+
+    .header p {
+      margin-top: 8px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    .tabs {
+      display: flex;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .tab {
+      flex: 1;
+      text-align: center;
+      padding: 14px;
+      font-size: 14px;
+      cursor: pointer;
+      background: #eee;
+    }
+
+    .tab.active {
+      background: #fff;
+      font-weight: 600;
+      border-bottom: 2px solid #000;
+    }
+
+    .content {
+      padding: 24px;
+      display: none;
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    .content.active {
+      display: block;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-top: 0;
+      border-left: 4px solid #000;
+      padding-left: 8px;
+    }
+
+    .price-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .box {
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 10px;
+      text-align: center;
+      background: #fafafa;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 16px;
+      font-size: 12px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <div class="header">
+    <h1>WUNYOURHEART</h1>
+    <p>CAKE ORDER NOTICE｜蛋糕訂購須知</p>
+  </div>
+
+  <div class="tabs">
+    <div class="tab active" onclick="switchTab(0)">價格</div>
+    <div class="tab" onclick="switchTab(1)">口味尺寸</div>
+    <div class="tab" onclick="switchTab(2)">取貨付款</div>
+  </div>
+
+  <!-- 分頁 1：價格 -->
+  <div class="content active">
+    <h2>鮮奶油蛋糕｜參考價格</h2>
+    <div class="price-grid">
+      <div class="box">
+        韓式簡約<br>
+        4吋 $800｜6吋 $1250｜8吋 $1850
+      </div>
+      <div class="box">
+        繪圖・鮮花・翻糖・公仔<br>
+        4吋 $980｜6吋 $1650｜8吋 $2250
+      </div>
+      <div class="box">
+        韓式豆沙裱花<br>
+        4吋 $1350｜6吋 $1850｜8吋 $2650
+      </div>
+    </div>
+    <p>＊以上皆為起價，最終價格依設計與夾餡複雜度報價。</p>
+  </div>
+
+  <!-- 分頁 2：口味尺寸 -->
+  <div class="content">
+    <h2>蛋糕體口味（擇一）</h2>
+    原味香草｜伯爵紅茶｜巧克力
+
+    <h2>夾心口味（擇二）</h2>
+    當季水果｜鐵觀音卡士達｜伯爵卡士達｜香草卡士達｜巧克力慕斯｜自製布丁｜自製芋泥
+
+    <h2>尺寸與人數</h2>
+    4吋：2–4人｜6吋：5–8人｜8吋：12–15人｜6+4雙層：10–16人
+
+    <h2>包裝配件</h2>
+    4–6吋：標配 5人份餐盤＋蠟燭  
+    8吋：標配 10人份餐盤＋蠟燭  
+    加購餐盤：一份五入 $40
+  </div>
+
+  <!-- 分頁 3：取貨付款 -->
+  <div class="content">
+    <h2>面交自取</h2>
+    南投縣埔里鎮水頭路68號  
+    取貨時間：11:00–19:00（可彈性調整）
+
+    <h2>外送服務</h2>
+    埔里市區 $120 起｜魚池鄉 $300 起｜日月潭碼頭 $350 起｜伊達邵 $450 起
+
+    <h2>付款方式</h2>
+    匯款或 Line Pay，全額付款  
+    請於 3 日內完成付款才算成立訂單  
+    五日內急件加收 $300
+  </div>
+
+  <div class="footer">
+    @wunyourheart.cake
+  </div>
+</div>
+
+<script>
+  function switchTab(index) {
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.content');
+    tabs.forEach(t => t.classList.remove('active'));
+    contents.forEach(c => c.classList.remove('active'));
+    tabs[index].classList.add('active');
+    contents[index].classList.add('active');
+  }
+</script>
+
+</body>
+</html>
