@@ -131,35 +131,79 @@
       margin-top: 6px;
       line-height: 1.6;
     }
-/* 高級黑白社群圖示列（穩定顯示版） */
+/* 浮動底部社群列（桌機正常、手機吸底） */
+.footer-bar {
+  text-align: center;
+  margin: 16px 0 8px;
+}
+
+/* icon 排成一列 */
 .footer-icons {
   display: flex;
   justify-content: center;
-  gap: 14px;               /* icon 之間的間距 */
-  margin: 16px 0 6px;
+  gap: 14px;
 }
 
+/* 每一個黑色小方塊 */
 .footer-icons a {
-  width: 40px;             /* 外框寬度（原本太大就這裡縮） */
-  height: 40px;            /* 外框高度 */
-  border-radius: 10px;     /* 圓角大小 */
+  width: 40px;             /* 外框大小：跟你現在差不多 */
+  height: 40px;
+  border-radius: 10px;
   background: #000;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
+/* 滑鼠移過去（桌機） */
 .footer-icons a:hover {
   transform: translateY(-2px);
 }
 
+/* ✦ 點擊微放大／縮回的手感 */
+.footer-icons a:active {
+  transform: translateY(0) scale(0.92);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+/* 中間白色 icon 本體 */
 .footer-icons svg {
-  width: 20px;             /* 中間圖示大小 */
+  width: 20px;
   height: 20px;
   fill: #fff;
 }
-    }
+
+.footer-copy {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #888;
+}
+
+/* ✦ 手機：吸附在螢幕底部的浮動 bar */
+@media (max-width: 600px) {
+  .footer-bar {
+    position: fixed;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255,255,255,0.96);
+    border-radius: 999px;
+    padding: 6px 18px 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.28);
+    z-index: 999;
+  }
+
+  .footer-copy {
+    margin-top: 4px;
+  }
+
+  /* 預留一點空間，避免內容被浮動 bar 蓋住 */
+  .card {
+    padding-bottom: 80px;
+  }
+}
   </style>
 </head>
 <body>
@@ -297,32 +341,34 @@
     五日內急件加收 $300。
   </div>
 
-<!-- 社群連結圖示列 -->
-<div class="footer-icons">
+<!-- 浮動底部社群列 -->
+<div class="footer-bar">
+  <div class="footer-icons">
 
-  <!-- LINE -->
-  <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=762seozl" target="_blank" aria-label="LINE">
-    <svg viewBox="0 0 24 24"><path d="M19.6 3.5H4.4C3.1 3.5 2 4.6 2 5.9v12.2c0 1.3 1.1 2.4 2.4 2.4h15.2c1.3 0 2.4-1.1 2.4-2.4V5.9c0-1.3-1.1-2.4-2.4-2.4zM7.8 12.8c-1.2 0-2.2-.9-2.2-2s1-2 2.2-2 2.2.9 2.2 2-1 2-2.2 2zm4.2 0c-1.2 0-2.2-.9-2.2-2s1-2 2.2-2 2.2.9 2.2 2-1 2-2.2 2zm4.2 0c-1.2 0-2.2-.9-2.2-2s1-2 2.2-2 2.2.9 2.2 2-1 2-2.2 2z"/></svg>
-  </a>
+    <!-- LINE -->
+    <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=762seozl" target="_blank" aria-label="LINE">
+      <svg viewBox="0 0 24 24"><path d="M19.6 3.5H4.4C3.1 3.5 2 4.6 2 5.9v12.2c0 1.3 1.1 2.4 2.4 2.4h15.2c1.3 0 2.4-1.1 2.4-2.4V5.9c0-1.3-1.1-2.4-2.4-2.4zM7.8 12.8c-1.2 0-2.2-.9-2.2-2s1-2 2.2-2 2.2.9 2.2 2-1 2-2.2 2zm4.2 0c-1.2 0-2.2-.9-2.2-2s1-2 2.2-2 2.2.9 2.2 2-1 2-2.2 2zm4.2 0c-1.2 0-2.2-.9-2.2-2s1-2 2.2-2 2.2.9 2.2 2-1 2-2.2 2z"/></svg>
+    </a>
 
-  <!-- IG -->
-  <a href="https://instagram.com/wunyourheart.cake" target="_blank" aria-label="Instagram">
-    <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 5.5a4.5 4.5 0 100 9 4.5 4.5 0 000-9zm6-1.4a1.1 1.1 0 11-2.2 0 1.1 1.1 0 012.2 0z"/></svg>
-  </a>
+    <!-- IG -->
+    <a href="https://instagram.com/wunyourheart.cake" target="_blank" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 5.5a4.5 4.5 0 100 9 4.5 4.5 0 000-9zm6-1.4a1.1 1.1 0 11-2.2 0 1.1 1.1 0 012.2 0z"/></svg>
+    </a>
 
-  <!-- Facebook -->
-  <a href="https://www.facebook.com/wunyourheartcake-103472025562277/" target="_blank" aria-label="Facebook">
-    <svg viewBox="0 0 24 24"><path d="M14 9h3V6h-3c-2.8 0-4 1.7-4 4v2H7v3h3v7h3v-7h3l1-3h-4v-2c0-.7.2-1 1-1z"/></svg>
-  </a>
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/wunyourheartcake-103472025562277/" target="_blank" aria-label="Facebook">
+      <svg viewBox="0 0 24 24"><path d="M14 9h3V6h-3c-2.8 0-4 1.7-4 4v2H7v3h3v7h3v-7h3l1-3h-4v-2c0-.7.2-1 1-1z"/></svg>
+    </a>
 
-  <!-- Google Map -->
-  <a href="https://www.google.com/maps/place/545%E5%8D%97%E6%8A%95%E7%B8%A3%E5%9F%94%E9%87%8C%E9%8E%AE%E6%B0%B4%E9%A0%AD%E8%B7%AF68%E8%99%9F" target="_blank" aria-label="Google Map">
-    <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 00-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 00-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
-  </a>
+    <!-- Google Map -->
+    <a href="https://www.google.com/maps/place/545%E5%8D%97%E6%8A%95%E7%B8%A3%E5%9F%94%E9%87%8C%E9%8E%AE%E6%B0%B4%E9%A0%AD%E8%B7%AF68%E8%99%9F" target="_blank" aria-label="Google Map">
+      <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 00-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 00-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+    </a>
 
+  </div>
+
+  <div class="footer-copy">@wunyourheart.cake</div>
 </div>
-
-<div class="footer-copy">@wunyourheart.cake</div>
 </div> <!-- .card 結束 -->
 
 <script>
