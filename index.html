@@ -131,45 +131,44 @@
       margin-top: 6px;
       line-height: 1.6;
     }
+/* 高級黑白社群圖示列（穩定顯示版） */
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 20px 0 6px;
+}
 
-    /* 高級社群圖示列 */
-    .footer-icons {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 16px;
-      margin: 18px 0 4px;
-    }
+.footer-icons a {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.25s ease;
+}
 
-    .footer-icons a {
-      width: 30px;
-      height: 30px;
-      border-radius: 8px;
-      background: #111;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: all 0.2s ease;
-    }
+.footer-icons a:hover {
+  transform: translateY(-2px);
+  background: #222;
+}
 
-    .footer-icons a:hover {
-      transform: translateY(-2px);
-      background: #333;
-    }
+.footer-icons img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* ✅ 強制黑底白圖 */
+}
 
-    .footer-icons img {
-      width: 16px;
-      height: 16px;
-      object-fit: contain;
-      filter: invert(1);
-    }
-
-    .footer-copy {
-      text-align: center;
-      font-size: 12px;
-      color: #999;
-      padding: 0 0 16px;
-      margin-top: 2px;
+.footer-copy {
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  padding-bottom: 16px;
+}
     }
   </style>
 </head>
@@ -189,7 +188,7 @@
 
   <!-- 分頁 1：價格 -->
   <div class="content active">
-    <h2>🍰 蛋糕價目表</h2>
+    <h2>🎂 蛋糕價目表</h2>
 
     <div class="price-list">
 
@@ -309,27 +308,33 @@
   </div>
 
   <!-- 底部社群圖示 -->
-  <div class="footer-icons">
-    <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=762seozl" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE">
-    </a>
+<div class="footer-icons">
 
-    <a href="https://instagram.com/wunyourheart.cake?igshid=NTdlMDg3MTY=" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-    </a>
+  <!-- LINE -->
+  <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=762seozl" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111644.png" alt="LINE">
+  </a>
 
-    <a href="https://www.facebook.com/wunyourheartcake-103472025562277/" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook">
-    </a>
+  <!-- IG -->
+  <a href="https://instagram.com/wunyourheart.cake?igshid=NTdlMDg3MTY=" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+  </a>
 
-    <a href="https://www.google.com/maps/place/545%E5%8D%97%E6%8A%95%E7%B8%A3%E5%9F%94%E9%87%8C%E9%8E%AE%E6%B0%B4%E9%A0%AD%E8%B7%AF68%E8%99%9F" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Google_Maps_icon_%282020%29.svg" alt="Map">
-    </a>
-  </div>
+  <!-- Facebook -->
+  <a href="https://www.facebook.com/wunyourheartcake-103472025562277/" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+  </a>
 
-  <div class="footer-copy">
-    @wunyourheart.cake
-  </div>
+  <!-- Google Maps -->
+  <a href="https://www.google.com/maps/place/545%E5%8D%97%E6%8A%95%E7%B8%A3%E5%9F%94%E9%87%8C%E9%8E%AE%E6%B0%B4%E9%A0%AD%E8%B7%AF68%E8%99%9F" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Map">
+  </a>
+
+</div>
+
+<div class="footer-copy">
+  @wunyourheart.cake
+</div>
 </div> <!-- .card 結束 -->
 
 <script>
