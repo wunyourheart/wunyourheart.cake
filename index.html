@@ -78,13 +78,6 @@
       padding-left: 8px;
     }
 
-    .footer {
-      text-align: center;
-      padding: 16px;
-      font-size: 12px;
-      color: #777;
-    }
-
     /* 價目表樣式 */
     .price-list {
       margin-top: 8px;
@@ -137,37 +130,46 @@
       color: #777;
       margin-top: 6px;
       line-height: 1.6;
-     /* 高級社群圖示列 */
-.footer-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 18px;
-  margin: 18px 0 6px;
-}
+    }
 
-.footer-icons a {
-  width: 30px;
-  height: 30px;
-  border-radius: 8px;
-  background: #111;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.2s ease;
-}
+    /* 高級社群圖示列 */
+    .footer-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      margin: 18px 0 4px;
+    }
 
-.footer-icons a:hover {
-  transform: translateY(-2px);
-  background: #333;
-}
+    .footer-icons a {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.2s ease;
+    }
 
-.footer-icons img {
-  width: 16px;
-  height: 16px;
-  object-fit: contain;
-  filter: invert(1);
-} 
+    .footer-icons a:hover {
+      transform: translateY(-2px);
+      background: #333;
+    }
+
+    .footer-icons img {
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
+      filter: invert(1);
+    }
+
+    .footer-copy {
+      text-align: center;
+      font-size: 12px;
+      color: #999;
+      padding: 0 0 16px;
+      margin-top: 2px;
     }
   </style>
 </head>
@@ -263,7 +265,7 @@
         ✦ 以上價格皆為「圓形蛋糕」基本起跳價，愛心、方形及其他立體造型皆可另外詢問。<br>
         ✦ 實際價格會依照口味、外觀設計、特殊種類及手工難易度等等都會影響最終價格。<br>
         我們會在細節完整確認後提供最終報價，確認沒問題再進行下單。<br>
-        若有預算考量或細節想調整，也歡迎一起討論，確認 OK 再下單即可🤍
+        若有預算考量或細節想調整，也歡迎一起討論，確認 OK 再下單即可 🤍
       </p>
 
     </div>
@@ -306,33 +308,29 @@
     五日內急件加收 $300。
   </div>
 
- <div class="footer-icons">
-  <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=762seozl" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg">
-  </a>
+  <!-- 底部社群圖示 -->
+  <div class="footer-icons">
+    <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=762seozl" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE">
+    </a>
 
-  <a href="https://instagram.com/wunyourheart.cake?igshid=NTdlMDg3MTY=" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
-  </a>
+    <a href="https://instagram.com/wunyourheart.cake?igshid=NTdlMDg3MTY=" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+    </a>
 
-  <a href="https://www.facebook.com/wunyourheartcake-103472025562277/" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg">
-  </a>
+    <a href="https://www.facebook.com/wunyourheartcake-103472025562277/" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook">
+    </a>
 
-  <a href="https://www.google.com/maps/place/545%E5%8D%97%E6%8A%95%E7%B8%A3%E5%9F%94%E9%87%8C%E9%8E%AE%E6%B0%B4%E9%A0%AD%E8%B7%AF68%E8%99%9F%E5%8D%97%E6%8A%95%E7%9B%A3%E7%90%86%E7%AB%99%E5%9F%94%E9%87%8C%E7%9B%A3%E7%90%86%E5%88%86%E7%AB%99/@23.9507381,120.9716677,16z" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Google_Maps_icon_%282020%29.svg">
-  </a>
-</div>
-</div>
-
-<div class="footer-copy">
-  @wunyourheart.cake
-</div>
-    </div>
+    <a href="https://www.google.com/maps/place/545%E5%8D%97%E6%8A%95%E7%B8%A3%E5%9F%94%E9%87%8C%E9%8E%AE%E6%B0%B4%E9%A0%AD%E8%B7%AF68%E8%99%9F" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Google_Maps_icon_%282020%29.svg" alt="Map">
+    </a>
   </div>
 
+  <div class="footer-copy">
+    @wunyourheart.cake
   </div>
-</div> <!-- 這個是 .card 的結尾 -->
+</div> <!-- .card 結束 -->
 
 <script>
   function switchTab(index) {
