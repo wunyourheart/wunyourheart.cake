@@ -200,6 +200,29 @@
   justify-content: center;
   gap: 14px;
 }
+/* FAQ 專用美化列表 */
+.faq-list {
+  margin: 0;
+  padding: 0;
+}
+
+.faq-list div {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* 小圓點指示符 */
+.faq-list div::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #111;
+  font-weight: 700;
+}
 
 /* 每一個黑色小方塊 */
 .footer-icons a {
@@ -627,102 +650,104 @@
 
   <div class="info-group">
     <div class="info-group-title">▸ 蛋糕什麼時候開放訂購？</div>
-    <div class="info-box">
-      ➜ 每個月 1 號 00:00 準時開放訂購下個月蛋糕<br>
-      ➜ 休息日不定期，將於 IG 限時動態與官方 LINE 公告
-    </div>
+ <div class="info-box faq-list">
+  <div>每個月 1 號 00:00 準時開放訂購下個月蛋糕</div>
+  <div>休息日不定期，將於 IG 限時動態與官方 LINE 公告</div>
+</div>
   </div>
 
   <div class="info-group">
     <div class="info-group-title">▸ 蛋糕討論完後可以提供草圖嗎？</div>
     <div class="info-box">
-      ➜ 工作室未提供草圖服務。<br>
-      ➜ 請於討論時清楚列出希望包含的樣式與元素（顏色、主題、文字、風格等）。<br>
-      ➜ 因每位客人在意的細節不同，請務必事前溝通清楚。
+      工作室未提供草圖服務。<br>
+      請於討論時清楚列出希望包含的樣式與元素（顏色、主題、文字、風格等）。<br>
+      因每位客人在意的細節不同，請務必事前溝通清楚。
     </div>
   </div>
 
   <div class="info-group">
     <div class="info-group-title">▸ 可以指定「完全一模一樣」的蛋糕嗎？</div>
     <div class="info-box">
-      ➜ 所有蛋糕皆為手工製作，與照片略有差異屬正常現象。<br>
-      ➜ 若對「必須完全一模一樣」有高度要求者，請斟酌是否下單。
+      所有蛋糕皆為手工製作，與照片略有差異屬正常現象。<br>
+      若對「必須完全一模一樣」有高度要求者，請斟酌是否下單。
     </div>
   </div>
 
   <div class="info-group">
     <div class="info-group-title">▸ 可以依照圖片訂製蛋糕嗎？</div>
     <div class="info-box">
-      ➜ 可提供圖片作為風格參考（配色、氛圍、構圖）。<br>
-      ➜ 成品將以相同風格概念重新設計製作，非 100% 複製。<br>
-      ➜ 涉及版權角色將依可行性評估製作或調整為相似風格。
+      可提供圖片作為風格參考（配色、氛圍、構圖）。<br>
+      成品將以相同風格概念重新設計製作，非 100% 複製。<br>
+      涉及版權角色將依可行性評估製作或調整為相似風格。
     </div>
   </div>
 
   <div class="info-group">
     <div class="info-group-title">▸ 蛋糕上的顏色是天然色素嗎？</div>
     <div class="info-box">
-      ➜ 使用進口人工食用色素，顏色飽和度高。<br>
-      ➜ 高飽和色系可能會短暫染色屬正常現象。<br>
-      ➜ 若對色素有顧慮，請下單前提前告知。
+      使用進口人工食用色素，顏色飽和度高。<br>
+      高飽和色系可能會短暫染色屬正常現象。<br>
+      若對色素有顧慮，請下單前提前告知。
     </div>
   </div>
 
   <div class="info-group">
     <div class="info-group-title">▸ 素食者可以食用嗎？</div>
     <div class="info-box">
-      ➜ 多數口味為蛋奶素可食。<br>
-      ➜ 含有吉利丁，全素者無法食用。<br>
-      ➜ 可私訊詢問特定蛋糕原料。
+      多數口味為蛋奶素可食。<br>
+      含有吉利丁，全素者無法食用。<br>
+      可私訊詢問特定蛋糕原料。
     </div>
   </div>
 
   <div class="info-group">
     <div class="info-group-title">▸ 有寶寶可以吃的蛋糕嗎？</div>
     <div class="info-box">
-      ➜ 食材皆為一般安心食材，但未特別避開蛋奶過敏原。<br>
-      ➜ 若為幼童或易過敏體質，請自行評估後再訂購。
+      食材皆為一般安心食材，但未特別避開蛋奶過敏原。<br>
+      若為幼童或易過敏體質，請自行評估後再訂購。
     </div>
   </div>
 
   <div class="info-group">
     <div class="info-group-title">▸ 蛋糕上的鮮花可以食用嗎？</div>
     <div class="info-box">
-      ➜ 鮮花僅作裝飾，不可食用。<br>
-      ➜ 皆有隔離蛋糕本體，食用仍建議避開接觸處。
+      鮮花僅作裝飾，不可食用。<br>
+      裝飾前皆會先清洗，並以鋁箔紙隔絕蛋糕本體！<br>
+      食用仍建議避開接觸處。
     </div>
   </div>
 
   <div class="info-group">
     <div class="info-group-title">▸ 蛋糕可以常溫放多久？</div>
     <div class="info-box">
-      ➜ 建議不超過 30–60 分鐘（依氣溫調整）。<br>
-      ➜ 夏天與戶外活動務必使用保冷袋＋保冷劑。
+      建議不超過 30–60 分鐘（依氣溫調整）。<br>
+      夏天與戶外活動務必使用保冷袋＋保冷劑。
     </div>
   </div>
 
   <div class="info-group">
     <div class="info-group-title">▸ 可以指定低糖或無糖嗎？</div>
     <div class="info-box">
-      ➜ 甜度為固定微糖設定，不建議完全無糖。<br>
-      ➜ 若有糖分控制需求，可提前討論。
+      甜度為固定微糖設定，不建議完全無糖，<br>
+      以免影響整體風味與結構穩定。<br>
+      若有糖分控制需求，可提前討論。
     </div>
   </div>
 
   <div class="info-group">
     <div class="info-group-title">▸ 內餡可以更換或避開特定食材嗎？</div>
     <div class="info-box">
-      ➜ 內餡可於可選項目內調整。<br>
-      ➜ 請於下單前告知，確認後恕不接受臨時更改。
+      內餡可於可選項目內調整。<br>
+      請於下單前告知，確認後恕不接受臨時更改。
     </div>
   </div>
 
   <div class="info-group">
     <div class="info-group-title">▸ 外縣市可以宅配嗎？</div>
     <div class="info-box">
-      ➜ 是否提供宅配依蛋糕款式與天氣狀況評估。<br>
-      ➜ 物流仍有碰撞與延誤風險，可接受者再下單。<br>
-      ➜ 因物流導致損傷，將協助處理但無法保證全額賠償。
+      是否提供宅配依蛋糕款式與天氣狀況評估。<br>
+      物流仍有碰撞與延誤風險，可接受者再下單。<br>
+      因物流導致損傷，將協助處理但無法保證全額賠償。
     </div>
   </div>
 </div>
